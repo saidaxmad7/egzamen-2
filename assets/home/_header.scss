@@ -1,0 +1,106 @@
+/*header start*/
+
+.header {
+    &-row {
+        padding: 10px 0;
+        @include flex(center, space-between);
+
+        @include md(390) {
+            column-gap: 12px;
+        }
+    }
+
+    &-nav {
+        display: flex;
+        column-gap: 48px;
+
+        @include md(982) {
+            column-gap: 20px;
+        }
+
+        @include md(800) {
+            display: none;
+        }
+    }
+
+    &-link {
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 19px;
+        color: $header-line-color;
+        @include trn();
+
+        &.active,
+        &:hover {
+            color: $hover-color;
+        }
+
+        @include md(862) {
+            font-size: 14px;
+        }
+
+    }
+
+    &-buttons {
+        display: flex;
+        column-gap: 12px;
+    }
+
+    &-button {
+        background: $button-color;
+        border-radius: 8px;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 19px;
+        color: $white-color;
+        padding: 12px 30px;
+        @include trn();
+
+        @include md(390) {
+            font-size: 10px;
+        }
+
+        @include md(882) {
+            padding: 8px 24px;
+        }
+
+        &:hover {
+            background-color: $header-line-color;
+        }
+
+        &__white {
+            border: 1px solid $button-border;
+            border-radius: 8px;
+            padding: 12px;
+            font-weight: 600;
+            font-size: 16px;
+            line-height: 19px;
+            color: $button-border;
+            @include flex(center, center);
+            @include trn();
+
+            &:hover {
+                background-color: $button-color;
+            }
+
+            @include md(800) {
+                display: none;
+            }
+        }
+    }
+
+    &-mobile {
+        display: none;
+
+        @include md(800) {
+            display: block;
+        }
+    }
+
+    &-line {
+        border-bottom: 1px solid $header-line-color;
+        display: block;
+    }
+}
+
+/*header end*/

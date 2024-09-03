@@ -1,0 +1,192 @@
+/*programs start*/
+
+.programs {
+    margin-top: 50px;
+
+    &-row {
+        @include flex(center, space-between);
+        margin-bottom: 50px;
+    }
+
+    &-title {
+        font-weight: 600;
+        font-size: 36px;
+        line-height: 47px;
+        color: $black-color;
+
+
+        &__primary {
+            color: $button-color;
+        }
+
+        @include md(488) {
+            font-size: 24px;
+        }
+        @include md(335) {
+            font-size: 18px;
+        }
+    }
+
+    &-button {
+        border: 1px solid $button-border;
+        padding: 14px 30px;
+        border-radius: 8px;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 19px;
+        color: $hover-color;
+        @include trn();
+
+        &:hover {
+            background: $header-line-color;
+            color: $white-color;
+            border: 1px solid transparent;
+        }
+
+        @include md(488) {
+            padding: 10px 20px;
+            font-size: 14px
+        }
+        @include md(335) {
+            font-size: 11px;
+        }
+    }
+
+    &-cards {
+        @include flex(center, none);
+        flex-wrap: wrap;
+        row-gap: 24px;
+        column-gap: 24px;
+        overflow-x: scroll;
+        width: 100%;
+
+        &::-webkit-scrollbar {
+            display: none;
+        }
+        
+        @include md (980) {
+            flex-wrap: nowrap;
+        }
+    }
+
+    &-image-1 {
+        background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.7) 100%), url(/images/programs-images/programs-1.png);
+    }
+
+    &-image-2 {
+        background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.7) 100%), url(/images/programs-images/programs-10.png);
+        border-radius: 16px;
+    }
+
+    &-image-3 {
+        background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.7) 100%), url(/images/programs-images/programs-3.png);
+        border-radius: 16px;
+    }
+
+    &-image-4 {
+        background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.7) 100%), url(/images/programs-images/programs-4.png);
+        border-radius: 16px;
+    }
+
+    &-image-5 {
+        background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.7) 100%), url(/images/programs-images/programs-5.png);
+
+        border-radius: 16px;
+    }
+
+    &-image-6 {
+        background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.7) 100%), url(/images/programs-images/programs-6.png);
+        border-radius: 16px;
+    }
+
+    &-image-7 {
+        background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.7) 100%), url(/images/programs-images/programs-7.png);
+        border-radius: 16px;
+    }
+
+    &-image-8 {
+        background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.7) 100%), url(/images/programs-images/programs-8.png);
+        border-radius: 16px;
+    }
+
+    &-image-9 {
+        background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.7) 100%), url(/images/programs-images/programs-9.png);
+        border-radius: 16px;
+    }
+
+    &-image-10 {
+        background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.7) 100%), url(/images/programs-images/programs-10.png);
+        border-radius: 16px;
+    }
+
+    &-box {
+        width: 23.6%;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        height: 260px;
+        @include flex(none, flex-end);
+        flex-direction: column;
+        padding: 24px;
+
+        @include md(1377) {
+            width: 22%;
+        }
+        @include md (980) {
+            width: 30%;
+            flex: 1 1 auto;
+        }
+    }
+
+    &-text {
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 19px;
+        color: $white-color;
+        width: 56%;
+        margin-bottom: 12px;
+
+        @include md(1377) {
+            width: 65%;
+        }
+
+        @include md(1304) {
+            width: 75%;
+        }
+        @include md(1304) {
+            width: 100%;
+        }
+
+        @include md (980) {
+        font-size: 12px;
+        }
+    }
+
+    &-info {
+        @include flex(center, space-between);
+
+        @include md(1265) {
+            flex-direction: column;
+            @include flex(flex-start, none);
+        }
+    }
+
+    &-location {
+        font-weight: 300;
+        font-size: 16px;
+        line-height: 19px;
+        color: $white-color;
+        display: flex;
+        align-items: center;
+        column-gap: 5px;
+    }
+
+    &-magister {
+        font-weight: 300;
+        font-size: 16px;
+        line-height: 19px;
+        color: $white-color;
+    }
+}
+
+/*programs end*/

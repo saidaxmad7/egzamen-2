@@ -1,0 +1,100 @@
+/*banner start*/
+
+.banner {
+    margin-top: 80px;
+
+    &-bg {
+        background: linear-gradient(359.84deg, #000000 1.04%, rgba(28, 25, 23, 0) 77.98%), url(/images/banner-images/banner-image.png);
+        height: 716px;
+        width: 100%;
+        border-radius: 26px;
+        background-repeat: no-repeat;
+        background-size: cover;
+        @include flex(none, flex-end);
+        flex-direction: column;
+        padding: 84px;
+
+        @include md(655) {
+            height: 400px;
+            padding: 30px;
+        }
+    }
+
+    &-title {
+        font-weight: 600;
+        font-size: 56px;
+        line-height: 80px;
+        color: $white-color;
+        width: 70%;
+
+        @include md(1185) {
+            width: 90%;
+        }
+
+        @include md(980) {
+            width: 100%;
+            font-size: 44px;
+        }
+
+        @include md(655) {
+            display: none;
+        }
+    }
+
+    &-subtitles {
+        @include flex(center, none);
+        width: 39%;
+        margin-top: 30px;
+
+        @include md(1185) {
+            width: 70%;
+        }
+
+        @include md(980) {
+            width: 100%;
+            column-gap: 20px;
+        }
+
+        @include md(655) {
+            margin: 0;
+        }
+    }
+
+    &-svg {
+        width: 64px;
+        height: 64px;
+        border: 1px solid $white-color;
+        border-radius: 50%;
+        @include flex(center, center);
+        padding: 8px;
+        @include trn();
+
+        &:hover {
+            background-color: $header-line-color;
+        }
+
+        @include md(655) {
+            display: none;
+        }
+    }
+
+    &-subtitle {
+        font-size: 25px;
+        line-height: 30px;
+        color: $white-color;
+
+        @include md(980) {
+            font-size: 20px;
+        }
+
+        @include md(430) {
+            font-size: 15px;
+        }
+
+        @include md(341) {
+            font-size: 10px;
+        }
+    }
+}
+
+/*banner end*/
